@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -15,10 +14,10 @@
 
   <meta charset="utf-8">
   <meta name="description"
-    content="Lumina: Real-Time Mobile Neural Rendering by Exploiting Computational Redundancy">
-  <meta name="keywords" content="Gaussian Splatting, Gaussian, LightGaussian">
+    content="InstantSplat, unifies dense stereo priors with 3D-GS to build 3D Gaussians of large-scale scenes from sparse-view and pose-free images in less than 1 minute. ">
+  <meta name="keywords" content="Instantsplat, Gaussian Splatting, Gaussian, LightGaussian">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lumina: Real-Time Mobile Neural Rendering by Exploiting Computational Redundancy
+  <title>InstantSplat: Sparse-view SfM-free Gaussian Splatting in Seconds
   </title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -50,41 +49,85 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
   <script src="./static/js/script.js"></script>
-  <script src="./static/js/switch.js"></script>
 
 </head>
 
 <body>
 
 
-
   <section class="hero">
     <div class="hero-body">
-      <div class="container">
+      <div class="container is-max-desktop">
         <div class="columns is-centered">
-          <div class="column has-text-centered" >
-            <h1 class="title is-1 publication-title" style="font-size: 2.8rem;"><span
-                style="color: #24c83c ;font-weight: bolder;">StreamingGS</span>: Voxel-Based Streaming 3D Gaussian Splatting with Memory Optimization and Architectural Support </h1>
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><span
+                style="color: #4CAF50 ;font-weight: bolder;">StreamingGS</span>: Voxel-Based Streaming 3D Gaussian Splatting with Memory Optimization and Architectural Support</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">  
-                Anonymous</span>
-            </div>
+                <a href="https://zhiwenfan.github.io/">Anonymous</a>
           </div>
 
+          <!-- affiliations -->
+          <div class="subtitle is-size-5">
+          
+          </div>
+
+          <!-- TODO: update paper and video link once upload -->
+
+
+
+          <!-- Video Link. -->
+          <!-- <span class="link-block">
+                  <a href="https://youtu.be/470hul75bSM" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a> -->
+          </span>
+          <!-- Code Link. -->
+          <!-- <span class="link-block">
+                  <a href="https://github.com/VITA-Group/Instantsplat"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
         </div>
+
       </div>
+    </div>
+    </div>
+    </div>
     </div>
   </section>
 
 
   
+
+  <!-- <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class=" carousel results-carousel">        
+          
+        </div>
+        <p>testteste</p>
+      </div>
+    </div>
+  </section> -->
+    
+
+
+
   <section class="section">
     <div class="container is-max-desktop ">
       <div class=" has-text-centered">
-        <h2 class="title is-3">Image Comparisons</h2>
+        <h2 class="title is-3">Visual Comparisons</h2>
         <div class="content has-text-justified">
           <p>
-            The comparisons between our method and  <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/" target="_blank">3DGS [Kerbl 2023]</a> are shown below.
+
           </p>
         </div>
         <div class="columns is-centered">
@@ -95,18 +138,18 @@
                 <div class="column is-full-width">
                   <div id="example1" class="bal-container-small">
 
-                    <div class="bal-after">
-                      <img src="./static/images/ours_Palace.png">
+                    <div class="bal-after" style="width:70%;">
+                      <img src="./static/images/cmp/truck/origin_truck.png">
                       <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                        Ours <br> 
+                        Ours
                       </div>
                     </div>
 
-                    <div class="bal-before" style="width:96.4968152866242%;">
-                      <div class="bal-before-inset" style="width: 512px;">
-                        <img src="./static/images/origin_Palace.png">
+                    <div class="bal-before" style="width:70%;">
+                      <div class="bal-before-inset" style="width: 268px;">
+                        <img src="./static/images/cmp/truck/origin_truck.png">
                         <div class="bal-beforePosition beforeLabel">
-                          3DGS <br> [Kerbl 2023]
+                          CF-3DGS [Fu 2023]
                         </div>
                       </div>
                     </div>
@@ -117,46 +160,22 @@
                     </div>
 
                   </div>
+
 
                   <div id="example2" class="bal-container-small">
 
                     <div class="bal-after">
-                      <img src="./static/images/ours_train.png">
-                      <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                        Ours <br> 
-                      </div>
-                    </div>
-
-                    <div class="bal-before" style="width:96.4968152866242%;">
-                      <div class="bal-before-inset" style="width: 512px;">
-                        <img src="./static/images/origin_train.png">
-                        <div class="bal-beforePosition beforeLabel">
-                          3DGS <br> [Kerbl 2023]
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="bal-handle" style="left:96.4968152866242%;">
-                      <span class=" handle-left-arrow"></span>
-                      <span class="handle-right-arrow"></span>
-                    </div>
-
-                  </div>
-
-                  <div id="example3" class="bal-container-small">
-
-                    <div class="bal-after">
-                      <img src="./static/images/ours_drjohnson.png">
+                      <img src="./static/images/comparison_n/Francis/francis_00000.png">
                       <div class="bal-afterPosition afterLabel">
-                        Ours <br>
+                        Ours
                       </div>
                     </div>
 
                     <div class="bal-before" style="width: 50%;">
                       <div class="bal-before-inset" style="width: 512px;">
-                        <img src="./static/images/origin_drjohnson.png">
+                        <img src="./static/images/comparison_n/Francis/nope_0000_francis.png">
                         <div class="bal-beforePosition beforeLabel">
-                          3DGS <br> [Kerbl 2023]
+                          Nope-NeRF [Bian 2022]
                         </div>
                       </div>
                     </div>
@@ -166,7 +185,29 @@
                       <span class="handle-right-arrow"></span>
                     </div>
                   </div>
-                
+                  <div id="example3" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img src="./static/images/comparison_n/Bicycle/bicycle_00005.png">
+                      <div class="bal-afterPosition afterLabel">
+                        Ours
+                      </div>
+                    </div>
+
+                    <div class="bal-before" style="width: 50%;">
+                      <div class="bal-before-inset" style="width: 512px;">
+                        <img src="./static/images/comparison_n/Bicycle/0005_nerfmm.png">
+                        <div class="bal-beforePosition beforeLabel">
+                          NeRFmm [Wang 2021]
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle" style="left: 50%;">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+                  </div>
 
                 </div>
               </div>
@@ -183,17 +224,17 @@
 
                 <div id="example4" class="bal-container-small">
                   <div class="bal-after">
-                    <img src="./static/images/ours_lego.png">
+                    <img src="./static/images/comparison_n/Horse/horse_00000.png">
                     <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                      Ours <br> 
+                      Ours
                     </div>
                   </div>
 
                   <div class="bal-before" style="width:62.10191082802548%;">
                     <div class="bal-before-inset" style="width: 512px;">
-                      <img src="./static/images/origin_lego.png">
+                      <img src="./static/images/comparison_n/Horse/cfgs_0000_horse.png">
                       <div class="bal-beforePosition beforeLabel">
-                        3DGS <br> [Kerbl 2023]
+                        CF-3DGS [Fu 2023]
                       </div>
                     </div>
                   </div>
@@ -207,17 +248,17 @@
 
                 <div id="example5" class="bal-container-small">
                   <div class="bal-after">
-                    <img src="./static/images/ours_truck.png">
+                    <img src="./static/images/comparison_n/Barn/barn_00003.png">
                     <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                      Ours <br> 
+                      Ours
                     </div>
                   </div>
 
                   <div class="bal-before" style="width:56.77179962894249%;">
                     <div class="bal-before-inset" style="width: 512px;">
-                      <img src="./static/images/origin_truck.png">
+                      <img src="./static/images/comparison_n/Barn/nope_0003_barn.png">
                       <div class="bal-beforePosition beforeLabel">
-                        3DGS <br> [Kerbl 2023]
+                        NoPe-NeRF [Bian 2022]
                       </div>
                     </div>
                   </div>
@@ -230,17 +271,17 @@
                 </div>
                 <div id="example6" class="bal-container-small">
                   <div class="bal-after">
-                    <img src="./static/images/ours_playroom.png">
+                    <img src="./static/images/comparison_n/Car/car_00006.png">
                     <div class="bal-afterPosition afterLabel" style="z-index:1;">
-                      Ours <br>
+                      Ours
                     </div>
                   </div>
 
                   <div class="bal-before" style="width:56.77179962894249%;">
                     <div class="bal-before-inset" style="width: 512px;">
-                      <img src="./static/images/origin_playroom.png">
+                      <img src="./static/images/comparison_n/Car/0006_nerfmm.png">
                       <div class="bal-beforePosition beforeLabel">
-                        3DGS <br> [Kerbl 2023]
+                        NeRFmm [Wang 2021]
                       </div>
                     </div>
                   </div>
@@ -259,8 +300,6 @@
 
     </div>
   </section>
-  
- 
 
   <script>
     new BeforeAfter({
@@ -285,6 +324,56 @@
 
   </script>
 
+  <!-- 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Needs update
+          </p>
+         
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+
+
+  <!-- TODO: update the arxiv link and github -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link" href="">
+          <i class="fas fa-file-pdf"></i>
+        </a> -->
+        <!-- <a class="icon-link" href="" class="external-link" disabled>
+          <i class="fab fa-github"></i> -->
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              We thank the authors of
+              We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that kindly open sourced the
+              template of this website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 
